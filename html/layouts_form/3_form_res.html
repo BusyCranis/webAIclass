@@ -6,6 +6,16 @@
     <title>HTML Form Result</title>
 
     <script>
+
+        console.log(window.location.href)
+        console.dir(window.location.href)
+        console.log(window.location.search)
+        console.dir(window.location.search)
+
+        var fullurlquery = new URLSearchParams(window.location.href)
+        console.log(fullurlquery)
+        console.dir(fullurlquery)
+
         var urlParams = new URLSearchParams(window.location.search);
         var username = urlParams.get("username")
         var password = urlParams.get("password")
