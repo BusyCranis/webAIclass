@@ -1,4 +1,6 @@
+// import { createInterface } from "readline";
 const readline = require("readline");
+
 
 
 const rl = readline.createInterface({
@@ -6,11 +8,14 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
+rl.on("line", (line) => {
+    console.log(line)
+    rl.close();
+});
 
-
-
-
-
+rl.on("close", () => {
+    process.exit();
+});
 
 
 
