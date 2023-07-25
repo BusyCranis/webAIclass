@@ -104,14 +104,14 @@ window.onload = function () {
 
   // 방금 둔 바둑돌에 사각 표시
   drawRect = (x, y) => {
-    let w = rowSize/2;
+    let w = rowSize / 2;
     ctx.strokeStyle = 'red';
     ctx.lineWidth = 3;
     ctx.strokeRect(
       x * rowSize + margin - w,
       y * rowSize + margin - w,
-      w + rowSize/2,
-      w + rowSize/2
+      w + rowSize / 2,
+      w + rowSize / 2
     );
   };
 
@@ -204,7 +204,7 @@ window.onload = function () {
     let thisColor = board[xyToIndex(x, y)]; // 마지막 둔 돌의 색깔이 1(흑),2(백)인지...
     //가로,세로와 대각선 두 방향, 총 네 방향 체크
     for (k = 0; k < 4; k++) {
-      winBlack = 1;   winWhite = 1;
+      winBlack = 1; winWhite = 1;
       // 놓여진 돌의 양쪽 방향으로
       for (j = 0; j < 2; j++) {
         // 5개씩의 돌의 색깔을 확인
@@ -221,8 +221,8 @@ window.onload = function () {
         }
       }
       // 연속 돌이 5개이면 승리
-      if (winBlack == 5) {winShow(1);}
-      if (winWhite == 5) {winShow(2);}
+      if (winBlack == 5) { winShow(1); }
+      if (winWhite == 5) { winShow(2); }
     }
   } // 승리확인 함수 끝
 
