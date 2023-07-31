@@ -1,0 +1,20 @@
+alert()와 confirm() 메서드는
+window.을 붙이지 않아도
+바로 사용할 수 있습니다.
+
+alert()와 confirm() 메서드가 만약에
+window.document 객체에 속해있었다면
+document.을 붙여야 했겠지만
+alert()와 confirm() 메서드는 window 객체에 속해있고
+window의 바로 밑에 붙어있는 요소들은
+window.을 생략해도 됩니다.
+document 객체를 사용할 때에도
+사실은 window.document에서 window.이 생략된 것입니다.
+
+alert()와 confirm() 메서드는
+기능적으로도 window.document 객체의 내부에서 동작하지 않습니다.
+window.document 객체의 바깥에 있는
+브라우저 창에서 alert()와 confirm() 메서드가 동작하여
+브라우저 창에 경고창과 확인창이 달리게 되고
+브라우저 창에 경고창과 확인창이 달려있는 동안에는
+사용자가 window.document의 영역을 만질수없게 됩니다.
